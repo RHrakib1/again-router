@@ -9,6 +9,7 @@ export default function Header() {
                 <Link to='/about'>About</Link>
                 <Link to='/contact'>Contact Us</Link>
                 <Link to='/user'>User</Link>
+                <Link to='/posts'>Post</Link>
             </nav>
         </div>
     )
