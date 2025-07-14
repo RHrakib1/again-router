@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 
 export default function Form() {
     const [name, setname] = useState(null)
+    const [email, setemail] = useState(null)
+    const [password, setpassword] = useState(null)
 
     const heandelSubmit = (e) => {
         e.preventDefault()
@@ -12,8 +14,13 @@ export default function Form() {
     const nameChager = (e) => {
         console.log(e.target.value);
         setname(e.target.value);
-
     }
+
+    const emailChange = (e) => {
+        console.log(e.target.value);
+        setemail(e.target.value)
+    }
+    
     return (
         <div>
             <form onSubmit={heandelSubmit} >
@@ -22,11 +29,12 @@ export default function Form() {
                     onChange={nameChager}
                     type="text" name='name' placeholder='Enter your Name' />
                 <input
+                onChange={emailChange}
                     className='border-2 px-0.5 mr-2.5'
                     type="email" name='email' placeholder='enter your email' />
                 <input
                     className='border-2 px-0.5 mr-2.5'
-                    type="number" name='number' placeholder='enter your number' />
+                    type="password" name='password' placeholder='enter your password' />
                 <input type="submit" value='Submit' className='btn btn-accent' />
 
             </form>
