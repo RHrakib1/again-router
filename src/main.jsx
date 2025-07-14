@@ -14,6 +14,7 @@ import Banner from './Component/Banner/Banner.jsx';
 import SeeUser from './Component/User/SeeUser.jsx';
 import Posts from './Component/Posts/Posts.jsx';
 import SeePostDetails from './Component/Posts/SeePostDetails.jsx';
+import Simple_From from './Component/From/Simple_From.jsx';
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
         path: '/postdetails/:postId',
         loader: ({ params }) => fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`),
         element: <SeePostDetails></SeePostDetails>
+      },
+      {
+        path:'/form',
+        element:<Simple_From></Simple_From>
       }
     ]
   }
