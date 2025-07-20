@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import RefFrom from './refFrom'
 
 export default function Form() {
     const [name, setname] = useState(null)
@@ -53,6 +54,10 @@ export default function Form() {
                 }
 
             </form>
+
+            <div className='border-amber-600 p-10'>
+                <RefFrom></RefFrom>
+            </div>
         </div>
     )
 }
