@@ -22,11 +22,23 @@ export default function About() {
             <Form></Form>
             <Reuseable
                 fromtitle={"Sing UP"}
-                hendelsubmit={hendelsubmitsingup}></Reuseable>
+                hendelsubmit={hendelsubmitsingup}
+
+            >
+                <div>
+                    <h1 className='text-3xl font-bold'>Singup</h1>
+                    <p>please sing up</p>
+                </div>
+            </Reuseable>
             <Reuseable
                 fromtitle={"Update"}
                 hendelsubmit={hendleUpdate}
-                hendelBtn='Update'></Reuseable>
+                hendelBtn='Update'>
+                <div>
+                    <h1 className='text-3xl font-bold'>update profile</h1>
+                    <p>please you profile update first</p>
+                </div>
+            </Reuseable>
         </div>
     )
 }

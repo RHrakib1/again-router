@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Reuseable({ fromtitle, hendelBtn, hendelsubmit }) {
+export default function Reuseable({ fromtitle, hendelBtn, children, hendelsubmit }) {
 
     const heandlelocal = e => {
         e.preventDefault()
@@ -14,7 +14,7 @@ export default function Reuseable({ fromtitle, hendelBtn, hendelsubmit }) {
     return (
         <div>
             <form onSubmit={heandlelocal}>
-                <h1>{fromtitle}</h1>
+                {children}
                 <input className='border-2 ml-4' type="text" name='name' />
                 <input className='border-2 ml-4' type="email" name='email' />
                 <input className='border-2 ml-4' type="password" name='password' />
